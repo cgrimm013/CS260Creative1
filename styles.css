@@ -8,17 +8,58 @@ body {
   background-color: #d3d3d3
 }
 
-h1{
+#fbiheader {
   display: inline;
   text-align: center;
 }
 
-h2{
+h1 {
+  text-align: center;
+}
+
+h2 {
   text-align: center;
   -webkit-margin-after: 0.2em;
 }
 
-.fa-chart-pie{
+.wantedInfo {
+  text-align: center;
+  margin: 10px;
+}
+
+.paddedTop{
+  padding-top: 20px;
+}
+
+.center{
+  text-align: center;
+  width: 70%;
+  margin: auto
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wantedPic {
+  display: inline;
+  height: 150px;
+}
+
+.newsItem{
+  text-align: center;
+  width: 400px;
+  margin: 10px;
+}
+
+.newsImg{
+  width: 90%;
+  height: 300px;
+}
+
+.fa-chart-pie {
   font-size: 30px;
 }
 
@@ -26,47 +67,49 @@ h2{
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas:
-    "header header"
-    "main news"
-    "statement news";
+  grid-template-areas: "header header" "main news" "statement news";
   grid-gap: 20px;
   margin: auto;
   width: 90%;
 }
 
-.miscNews{
+.miscNews {
   grid-area: news;
   text-align: center;
   background-color: darkgrey;
 }
 
-.newsNote{
+.newsNote {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.newsPic{
+.newsPic {
   width: 95%;
   height: 200px;
 }
 
-.statement{
+.statement {
   grid-area: statement;
   text-align: center;
   background-color: indianred;
 }
 
-.main{
+.main {
   grid-area: main;
   text-align: center;
   background-color: lightslategrey;
 }
 
-.header{
+.header {
   grid-area: header;
   text-align: center;
   padding-top: 10px
+}
+
+#donut{
+  height: 400px;
+  width: 60%;
 }
 
 nav {
@@ -101,4 +144,43 @@ nav li a:hover {
 
 .active {
   background-color: #ff0000;
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    padding: 0px;
+  }
+
+  .main{
+    width: 100%;
+  }
+
+  #donut{
+    height: 200px;
+    width: 100%;
+  }
+
+  .wantedPic {
+    width: 100%;
+    height: 250px;
+  }
+
+  .statement{
+    width: 100%;
+  }
+
+  .header {
+    height: auto;
+  }
+  /* Change grid */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "news"
+    "statement";
+    grid-gap: 20px;
+  }
 }
